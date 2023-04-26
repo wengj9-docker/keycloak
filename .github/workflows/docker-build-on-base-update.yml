@@ -103,8 +103,8 @@ jobs:
           cache-to: type=gha,mode=max
           platforms: linux/amd64,linux/arm64
           build-args: |
-            KC_DB_URL=${{ env.PG_URL }}
-            KC_DB_USERNAME=${{ env.PG_USER }}
+            KC_DB_URL=${{ vars.PG_URL }}
+            KC_DB_USERNAME=${{ vars.PG_USER }}
             KC_DB_PASSWORD=${{ secrets.PG_PASSWORD }}
         if: ${{ steps.baseupdatecheck.outputs.differs == 'true' }}
 
