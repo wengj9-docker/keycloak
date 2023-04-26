@@ -88,8 +88,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           build-args: |
             KC_DB_URL=${{ env.PG_URL }}
-            KC_DB_USERNAME=${{  env.PG_USER }}
-            KC_DB_PASSWORD=${{  secrets.PG_PASSWORD }}
+            KC_DB_USERNAME=${{ env.PG_USER }}
+            KC_DB_PASSWORD=${{ secrets.PG_PASSWORD }}
 
       # Sign the resulting Docker image digest except on PRs.
       # This will only write to the public Rekor transparency log when the Docker
