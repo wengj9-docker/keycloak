@@ -46,7 +46,7 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-        if: ${{ github.event_name != 'pull_request' && steps.baseupdatecheck.outputs.differs == 'true' }}
+        if: ${{ github.event_name != 'pull_request' }}
     
       # From: https://www.flypenguin.de/2021/07/30/auto-rebuild-docker-images-if-base-image-changes-using-github-actions/
       # only execute subsequent steps if an update is actually NEEDED.
